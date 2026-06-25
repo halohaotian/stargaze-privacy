@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — StarGaze: Night Sky</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      max-width: 720px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+      color: #24292f;
+      background: #fff;
+    }
+    h1, h2, h3 { color: #24292f; }
+    h1 { border-bottom: 1px solid #d0d7de; padding-bottom: 0.3em; }
+    a { color: #0969da; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .meta { color: #656d76; font-size: 0.9em; }
+    hr { border: 0; border-top: 1px solid #d0d7de; margin: 2em 0; }
+    code { background: #f6f8fa; padding: 0.2em 0.4em; border-radius: 3px; }
+    table { border-collapse: collapse; width: 100%; margin: 1em 0; }
+    th, td { border: 1px solid #d0d7de; padding: 0.5em 0.75em; text-align: left; }
+    th { background: #f6f8fa; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Privacy Policy — StarGaze: Night Sky</h1>
+    <p><strong>Last updated:</strong> 2026-06-25</p>
+
+    <p>StarGaze: Night Sky ("we", "our", "the app") is an astronomy and stargazing app developed for iOS and iPadOS. This privacy policy explains what data the app collects, how it is used, and your rights as a user.</p>
+
+    <h2>Short version</h2>
+    <p><strong>StarGaze does not collect, sell, or share any personal data. The app uses your device's location and motion sensors only on-device to render the visible sky, and makes a single outbound HTTPS request to a public satellite-tracking API to show the International Space Station (ISS). No data about you is ever transmitted or stored on a server under our control.</strong></p>
+
+    <hr>
+
+    <h2>1. Data we do NOT collect</h2>
+    <p>The app does <strong>not</strong> collect, store on any remote server, or sell:</p>
+    <ul>
+      <li>Your name, email, phone number, or any contact information</li>
+      <li>Your device identifiers, advertising IDs, or analytics IDs</li>
+      <li>Your usage patterns, behavior analytics, or crash reports</li>
+      <li>Your stargazing history, favorites, or any in-app activity</li>
+      <li>Any form of payment information (the app has no in-app purchases and no login)</li>
+    </ul>
+    <p>The app has <strong>no user accounts, no login, no sign-up, and no authentication</strong> of any kind.</p>
+
+    <h2>2. Permissions the app requests and why</h2>
+    <p>StarGaze uses two iOS system permissions. Both are required for the core sky-viewing feature, and both can be revoked at any time in iOS Settings → Privacy &amp; Security.</p>
+
+    <h3>Location (When In Use) — NSLocationWhenInUseUsageDescription</h3>
+    <ul>
+      <li><strong>What we access:</strong> your device's geographic latitude and longitude.</li>
+      <li><strong>Why:</strong> to compute which stars, constellations, the Moon, and planets are visible from your location on Earth. The sky you see depends on where you are.</li>
+      <li><strong>Where it is processed:</strong> entirely on your device. Your latitude/longitude is used inside the app's astronomical calculations and is <strong>never transmitted to us</strong>.</li>
+      <li><strong>When:</strong> only while the app is in the foreground.</li>
+    </ul>
+    <p>The app does <strong>not</strong> request "Always" location, does not request background location, and does not use your location for advertising.</p>
+
+    <h3>Motion (Device Attitude) — NSMotionUsageDescription</h3>
+    <ul>
+      <li><strong>What we access:</strong> the device's attitude/orientation (heading, pitch, roll) from the gyroscope, accelerometer, and magnetometer.</li>
+      <li><strong>Why:</strong> so the sky on screen rotates to match the direction you point your phone — turning the phone into a "window" onto the real sky.</li>
+      <li><strong>Where it is processed:</strong> entirely on your device. Motion data is never transmitted.</li>
+    </ul>
+    <p>The app does <strong>not</strong> request fitness, step counting, or health-related motion data.</p>
+
+    <h2>3. The only outbound network request</h2>
+    <p>StarGaze makes <strong>one</strong> kind of outbound network request:</p>
+    <table>
+      <thead>
+        <tr><th>Endpoint</th><th>Method</th><th>Purpose</th><th>What is sent</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>https://api.wheretheiss.at/v1/satellites/25544</code></td>
+          <td>HTTPS GET</td>
+          <td>Fetch the current latitude/longitude of the International Space Station so it can be shown on the in-app map</td>
+          <td>Nothing — this is a plain GET request with no parameters, no headers identifying you, and no cookies</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>Important notes:</strong></p>
+    <ul>
+      <li>This request is made only when you open the <strong>ISS Tracker</strong> tab.</li>
+      <li>The request is made directly from your device to the third-party API.</li>
+      <li>We do not operate this API, and we do not control what data its operator (Wheretheiss.at) logs. Their privacy practices are governed by their own policy.</li>
+      <li>No information about you (no device ID, no user ID, no location) is included in this request.</li>
+    </ul>
+    <p>All other app features (Star Map, Moon Calendar, Best Times) work fully offline after first launch.</p>
+
+    <h2>4. Where your data is stored</h2>
+    <ul>
+      <li><strong>Star Map settings</strong> (brightness filter, zoom, manual rotation) — stored in app memory only; reset when the app closes.</li>
+      <li><strong>Location &amp; motion data</strong> — used in memory for rendering; not persisted to disk.</li>
+      <li><strong>No files are written to your device's Documents or Library directories by the app itself.</strong></li>
+    </ul>
+    <p>The app does not use iCloud Drive, CloudKit, Firebase, or any cloud synchronization service.</p>
+
+    <h2>5. Third-party services</h2>
+    <p>The app does <strong>not</strong> integrate with any of the following:</p>
+    <ul>
+      <li>Analytics SDKs (Google Analytics, Firebase Analytics, Mixpanel, Amplitude, etc.)</li>
+      <li>Crash reporters (Crashlytics, Sentry, Bugsnag, etc.)</li>
+      <li>Advertising networks (AdMob, AdSense, Meta Audience Network, etc.)</li>
+      <li>Social login (Sign in with Apple, Google, Facebook, etc.)</li>
+      <li>In-app purchase SDKs (the app has no purchases)</li>
+    </ul>
+    <p>The only third-party service contacted is the public ISS-tracking API described in section 3.</p>
+
+    <h2>6. Children's privacy</h2>
+    <p>The app does not collect personal data from anyone, including children under 13 (or the applicable age of digital consent in your country). The astronomy content is educational and safe for all ages. No age gate is required because no personal data is collected.</p>
+
+    <h2>7. Your rights (GDPR / CCPA and similar)</h2>
+    <p>Because the app does not collect or store any personal data on servers under our control:</p>
+    <ul>
+      <li>There is no account or identifier to look up, correct, export, or delete.</li>
+      <li>You can erase all locally stored preferences at any time by deleting the app from your device.</li>
+    </ul>
+    <p>For the one outbound request to the ISS-tracking API, the operator of that API may have its own obligations; please contact them directly regarding any logs they keep.</p>
+
+    <h2>8. Data security</h2>
+    <ul>
+      <li>The app runs inside the iOS app sandbox, isolated from other apps.</li>
+      <li>The single outbound request uses HTTPS (encrypted in transit).</li>
+      <li>No secrets, tokens, or passwords are stored by the app.</li>
+    </ul>
+
+    <h2>9. Changes to this policy</h2>
+    <p>We may update this privacy policy from time to time. Any changes will be posted on this page with an updated "Last updated" date. Material changes will also be mentioned in the app's release notes.</p>
+
+    <h2>10. Contact</h2>
+    <p>If you have any questions about this privacy policy or the app's data practices, please contact us:</p>
+    <ul>
+      <li><strong>Email:</strong> halohaotianwu@gmail.com</li>
+      <li><strong>GitHub:</strong> <a href="https://github.com/halohaotian">github.com/halohaotian</a></li>
+    </ul>
+
+    <h2>11. Effective date</h2>
+    <p>This privacy policy is effective as of <strong>2026-06-25</strong> and applies to all versions of StarGaze: Night Sky from 1.0.0 onward.</p>
+
+    <hr>
+
+    <p><em>This privacy policy is provided in English. Translations to other languages may be made available in the future.</em></p>
+  </main>
+  <hr>
+  <p class="meta">
+    <a href="https://halohaotian.github.io/stargaze-privacy/">View this policy online</a> ·
+    Last updated: 2026-06-25 ·
+    <a href="https://github.com/halohaotian/stargaze-privacy">Source on GitHub</a>
+  </p>
+</body>
+</html>
