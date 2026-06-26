@@ -3,6 +3,7 @@
 > StarGaze does not collect, sell, or share any personal data.
 
 **Live page:** <https://halohaotian.github.io/stargaze-privacy/>
+**Support email:** [halohaotianwu@gmail.com](mailto:halohaotianwu@gmail.com)
 
 ---
 
